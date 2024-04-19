@@ -11,4 +11,4 @@ export interface DealsProps {
   assign_renter: Date
 }
 
-export class Deals<Props extends DealsProps> extends Entity<Props> {}
+export class Deal extends Entity<DealsProps> {}

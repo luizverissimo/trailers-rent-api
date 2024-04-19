@@ -7,4 +7,4 @@ export interface TenantsProps {
   photo: string
 }
 
-export class Tenants<Props extends TenantsProps> extends Entity<Props> {}
+export class Tenant extends Entity<TenantsProps> {}

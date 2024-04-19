@@ -13,4 +13,4 @@ export interface TrailersProps {
   longitude: number
 }
 
-export class Trailers<Props extends TrailersProps> extends Entity<Props> {}
+export class Trailer extends Entity<TrailersProps> {}

@@ -1,5 +1,5 @@
-import { Entity } from '../../../interfaces/entities/entity'
-import { UniqueEntityID } from '../../../interfaces/entities/unique-entity-id'
+import { Entity } from '../../../_interfaces/entities/entity'
+import { UniqueEntityID } from '../../../_interfaces/entities/unique-entity-id'
 
 export interface TrailersProps {
   tenant_id: UniqueEntityID

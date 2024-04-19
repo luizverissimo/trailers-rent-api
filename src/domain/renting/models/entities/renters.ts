@@ -1,4 +1,4 @@
-import { Entity } from '../../../interfaces/entities/entity'
+import { Entity } from '../../../_interfaces/entities/entity'
 
 export interface RentersProps {
   name: string

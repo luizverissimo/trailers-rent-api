@@ -13,7 +13,7 @@ interface CreateTenantUseCaseResponse {
 }
 
 export class CreateTenantUseCase {
-  constructor(private rentersRepository: TenantsRepository) {}
+  constructor(private tenantsRepository: TenantsRepository) {}
 
   async execute({
     name,
@@ -28,7 +28,7 @@ export class CreateTenantUseCase {
       photo,
     })
 
-    await this.rentersRepository.create(tenant)
+    await this.tenantsRepository.create(tenant)
 
     return { tenant }
   }

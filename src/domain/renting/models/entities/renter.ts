@@ -1,5 +1,5 @@
-import { Entity } from '@/domain/_interfaces/entities/entity'
-import { UniqueEntityID } from '@/domain/_interfaces/entities/unique-entity-id'
+import { Entity } from '@/shared/interfaces/entities/entity'
+import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 
 export interface RentersProps {
   name: string
@@ -9,6 +9,10 @@ export interface RentersProps {
 }
 
 export class Renter extends Entity<RentersProps> {
+  get name() {
+    return this.props.name
+  }
+
   static create(props: RentersProps, id?: UniqueEntityID) {
     const renter = new Renter(
       {

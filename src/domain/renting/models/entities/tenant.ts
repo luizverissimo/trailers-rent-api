@@ -1,4 +1,4 @@
-import { Entity } from '@/domain/_interfaces/entities/entity'
+import { Entity } from '@/shared/interfaces/entities/entity'
 
 export interface TenantsProps {
   name: string

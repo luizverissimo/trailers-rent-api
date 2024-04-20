@@ -1,5 +1,5 @@
-import { Entity } from '@/domain/_interfaces/entities/entity'
-import { UniqueEntityID } from '@/domain/_interfaces/entities/unique-entity-id'
+import { Entity } from '@/shared/interfaces/entities/entity'
+import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 
 export interface DealsProps {
   tenant_id: UniqueEntityID

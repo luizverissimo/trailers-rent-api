@@ -1,7 +1,7 @@
 import { Entity } from '@/shared/interfaces/entities/entity'
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 
-export interface TrailersProps {
+export interface TraillersProps {
   tenant_id: UniqueEntityID
   model: string
   brand: string
@@ -13,4 +13,4 @@ export interface TrailersProps {
   longitude: number
 }
 
-export class Trailer extends Entity<TrailersProps> {}
+export class Trailler extends Entity<TraillersProps> {}

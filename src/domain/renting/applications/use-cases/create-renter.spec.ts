@@ -9,6 +9,7 @@ describe('Create a renter', () => {
     inMemoryRentersRepository = new InMemoryRentersRepository()
     sut = new CreateRenterUseCase(inMemoryRentersRepository)
   })
+
   it('should create a renter', async () => {
     await sut.execute({
       name: 'luiz',

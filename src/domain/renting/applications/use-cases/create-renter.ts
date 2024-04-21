@@ -1,6 +1,7 @@
-import { Either, right } from '@/shared/interfaces/either'
+import { Either, left, right } from '@/shared/interfaces/either'
 import { Renter } from '../../models/entities/renter'
 import { RentersRepository } from '../repositories/renters-repository'
+import { ResourceNotFoundError } from '@/shared/interfaces/errors/use-case-errors/resource-not-found.error'
 
 interface CreateRenterUseCaseRequest {
   name: string
@@ -10,7 +11,7 @@ interface CreateRenterUseCaseRequest {
 }
 
 type CreateRenterUseCaseResponse = Either<
-  null,
+  ResourceNotFoundError,
   {
     renter: Renter
   }
@@ -25,6 +26,13 @@ export class CreateRenterUseCase {
     phone,
     photo,
   }: CreateRenterUseCaseRequest): Promise<CreateRenterUseCaseResponse> {
+    if (!name) {
+      return left(new ResourceNotFoundError())
+    }
+
+    if (!email) {
+      return left(new ResourceNotFoundError())
+    }
     const renter = Renter.create({
       name,
       email,

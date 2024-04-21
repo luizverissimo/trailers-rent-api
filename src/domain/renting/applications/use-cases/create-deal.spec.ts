@@ -1,5 +1,6 @@
 import { InMemoryDealsRepository } from 'test/repositories/in-memory-deals-repository'
 import { CreateDealUseCase } from './create-deal'
+import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 
 describe('Create a deal', () => {
   let inMemoryDealsRepository: InMemoryDealsRepository
@@ -9,8 +10,8 @@ describe('Create a deal', () => {
     sut = new CreateDealUseCase(inMemoryDealsRepository)
   })
 
-  it('should create a deal', () => {
-    sut.execute({
+  it('should create a deal', async () => {
+    const result = await sut.execute({
       tenantId: 'tenant-01',
       renterId: 'reter-01',
       price: 10,
@@ -20,6 +21,9 @@ describe('Create a deal', () => {
       assignedRenter: new Date(),
     })
 
-    expect(inMemoryDealsRepository.items[0].tenantId)
+    expect(result.isRight).toBeTruthy
+    expect(inMemoryDealsRepository.items[0].tenantId).toEqual(
+      new UniqueEntityID('tenant-01')
+    )
   })
 })

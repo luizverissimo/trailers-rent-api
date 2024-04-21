@@ -1,6 +1,7 @@
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 import { Trailler } from '../../models/entities/trailler'
 import { TraillersRepository } from '../repositories/traillers-repository'
+import { Either, right } from '@/shared/interfaces/either'
 
 interface CreateTraillerUseCaseRequest {
   tenantId: string
@@ -14,9 +15,12 @@ interface CreateTraillerUseCaseRequest {
   longitude: number
 }
 
-interface CreateTraillerUseCaseResponse {
-  trailler: Trailler
-}
+type CreateTraillerUseCaseResponse = Either<
+  null,
+  {
+    trailler: Trailler
+  }
+>
 
 export class CreateTraillerUseCase {
   constructor(private traillersRepository: TraillersRepository) {}
@@ -46,6 +50,6 @@ export class CreateTraillerUseCase {
 
     await this.traillersRepository.create(trailler)
 
-    return { trailler }
+    return right({ trailler })
   }
 }

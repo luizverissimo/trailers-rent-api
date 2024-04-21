@@ -12,7 +12,7 @@ describe('Create a Trailler', () => {
   })
 
   it('should create a Trailler', async () => {
-    await sut.execute({
+    const result = await sut.execute({
       tenantId: 'tenant1',
       model: 'model test',
       brand: 'brand test',
@@ -24,6 +24,7 @@ describe('Create a Trailler', () => {
       longitude: -49.2942842,
     })
 
+    expect(result.isRight).toBeTruthy
     expect(inMemoryTraillersRepository.items[0].tenantId).toEqual(
       new UniqueEntityID('tenant1')
     )

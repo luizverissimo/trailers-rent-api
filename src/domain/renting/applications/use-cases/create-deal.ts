@@ -1,6 +1,7 @@
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id.js'
 import { Deal } from '../../models/entities/deal.js'
 import { DealsRepository } from '../repositories/deals-repository.js'
+import { Either, right } from '@/shared/interfaces/either.js'
 
 interface DealUseCaseRequest {
   tenantId: string
@@ -12,9 +13,7 @@ interface DealUseCaseRequest {
   assignedRenter: Date
 }
 
-interface DealUseCaseResponse {
-  deal: Deal
-}
+type DealUseCaseResponse = Either<null, { deal: Deal }>
 
 export class CreateDealUseCase {
   constructor(private dealsRepository: DealsRepository) {}
@@ -39,6 +38,6 @@ export class CreateDealUseCase {
 
     this.dealsRepository.create(deal)
 
-    return { deal }
+    return right({ deal })
   }
 }

@@ -8,7 +8,7 @@ export interface DealsProps {
   endDate: Date
   price: number
   assignedTenant: Date
-  assignRenter: Date
+  assignedRenter: Date
 }
 
 export class Deal extends Entity<DealsProps> {

@@ -1,3 +1,4 @@
+import { Either, right } from '@/shared/interfaces/either'
 import { Tenant } from '../../models/entities/tenant'
 import { TenantsRepository } from '../repositories/tenants-repository'
 
@@ -8,9 +9,12 @@ interface CreateTenantUseCaseRequest {
   photo: string
 }
 
-interface CreateTenantUseCaseResponse {
-  tenant: Tenant
-}
+type CreateTenantUseCaseResponse = Either<
+  null,
+  {
+    tenant: Tenant
+  }
+>
 
 export class CreateTenantUseCase {
   constructor(private tenantsRepository: TenantsRepository) {}
@@ -30,6 +34,8 @@ export class CreateTenantUseCase {
 
     await this.tenantsRepository.create(tenant)
 
-    return { tenant }
+    return right({
+      tenant,
+    })
   }
 }

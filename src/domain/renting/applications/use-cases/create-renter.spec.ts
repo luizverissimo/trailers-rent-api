@@ -11,13 +11,14 @@ describe('Create a renter', () => {
   })
 
   it('should create a renter', async () => {
-    await sut.execute({
+    const result = await sut.execute({
       name: 'luiz',
       email: 'luiz@gmail.com',
       phone: '+5548997121754',
       photo: 'user01',
     })
 
+    expect(result.isRight).toBeTruthy
     expect(inMemoryRentersRepository.items[0].name).toEqual('luiz')
   })
 })

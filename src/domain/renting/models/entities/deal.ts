@@ -2,13 +2,21 @@ import { Entity } from '@/shared/interfaces/entities/entity'
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 
 export interface DealsProps {
-  tenant_id: UniqueEntityID
-  renter_id: UniqueEntityID
-  start_date: Date
-  end_date: Date
+  tenantId: UniqueEntityID
+  renterId: UniqueEntityID
+  startDate: Date
+  endDate: Date
   price: number
-  assign_tenant: Date
-  assign_renter: Date
+  assignedTenant: Date
+  assignRenter: Date
 }
 
-export class Deal extends Entity<DealsProps> {}
+export class Deal extends Entity<DealsProps> {
+  get tenantId() {
+    return this.props.tenantId
+  }
+  static create(props: DealsProps, id?: UniqueEntityID) {
+    const deal = new Deal({ ...props }, id)
+    return deal
+  }
+}

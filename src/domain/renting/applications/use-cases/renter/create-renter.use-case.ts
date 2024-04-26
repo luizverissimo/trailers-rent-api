@@ -1,6 +1,6 @@
 import { Either, left, right } from '@/shared/interfaces/either'
-import { Renter } from '../../models/entities/renter'
-import { RentersRepository } from '../repositories/renters-repository'
+import { Renter } from '../../../models/entities/renter'
+import { RentersRepository } from '../../repositories/renters-repository'
 import { ResourceNotFoundError } from '@/shared/interfaces/errors/use-case-errors/resource-not-found.error'
 
 interface CreateRenterUseCaseRequest {

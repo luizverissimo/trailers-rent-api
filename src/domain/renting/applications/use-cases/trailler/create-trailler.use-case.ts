@@ -1,6 +1,6 @@
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
-import { Trailler } from '../../models/entities/trailler'
-import { TraillersRepository } from '../repositories/traillers-repository'
+import { Trailler } from '../../../models/entities/trailler'
+import { TraillersRepository } from '../../repositories/traillers-repository'
 import { Either, right } from '@/shared/interfaces/either'
 
 interface CreateTraillerUseCaseRequest {

@@ -1,5 +1,5 @@
 import { InMemoryDealsRepository } from 'test/repositories/in-memory-deals-repository'
-import { CreateDealUseCase } from './create-deal'
+import { CreateDealUseCase } from './create-deal.use-case'
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 
 describe('Create a deal', () => {

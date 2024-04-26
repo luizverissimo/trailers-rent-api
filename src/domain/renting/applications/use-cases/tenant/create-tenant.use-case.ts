@@ -1,6 +1,6 @@
 import { Either, right } from '@/shared/interfaces/either'
-import { Tenant } from '../../models/entities/tenant'
-import { TenantsRepository } from '../repositories/tenants-repository'
+import { Tenant } from '../../../models/entities/tenant'
+import { TenantsRepository } from '../../repositories/tenants-repository'
 
 interface CreateTenantUseCaseRequest {
   name: string

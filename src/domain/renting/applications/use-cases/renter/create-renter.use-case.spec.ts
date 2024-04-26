@@ -1,4 +1,4 @@
-import { CreateRenterUseCase } from './create-renter'
+import { CreateRenterUseCase } from './create-renter.use-case'
 import { InMemoryRentersRepository } from 'test/repositories/in-memory-renters-repository'
 
 let inMemoryRentersRepository: InMemoryRentersRepository

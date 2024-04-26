@@ -1,5 +1,5 @@
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
-import { CreateTraillerUseCase } from './create-trailler'
+import { CreateTraillerUseCase } from './create-trailler.use-case'
 import { InMemoryTraillersRepository } from 'test/repositories/in-memory-traillers-repository'
 
 let inMemoryTraillersRepository: InMemoryTraillersRepository

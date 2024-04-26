@@ -1,6 +1,6 @@
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id.js'
-import { Deal } from '../../models/entities/deal.js'
-import { DealsRepository } from '../repositories/deals-repository.js'
+import { Deal } from '../../../models/entities/deal.js'
+import { DealsRepository } from '../../repositories/deals-repository.js'
 import { Either, right } from '@/shared/interfaces/either.js'
 
 interface DealUseCaseRequest {

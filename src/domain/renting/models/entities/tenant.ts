@@ -13,6 +13,18 @@ export class Tenant extends Entity<TenantsProps> {
     return this.props.name
   }
 
+  get email() {
+    return this.props.email
+  }
+
+  get phone() {
+    return this.props.phone
+  }
+
+  get photo() {
+    return this.props.photo
+  }
+
   static create(props: TenantsProps, id?: UniqueEntityID) {
     const tenant = new Tenant(
       {

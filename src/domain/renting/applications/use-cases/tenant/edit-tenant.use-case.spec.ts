@@ -1,7 +1,7 @@
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 import { EditTenantUseCase } from './edit-tenant.use-case'
 import { InMemoryTenantsRepository } from 'test/repositories/in-memory-tenants-repository'
-import { Tenant } from '@/domain/renting/models/entities/tenant'
+import { makeTenant } from 'test/factories/make-tenant'
 
 let inMemoryTenantsRepository: InMemoryTenantsRepository
 let sut: EditTenantUseCase
@@ -12,17 +12,9 @@ describe('Edit a tenant', () => {
     sut = new EditTenantUseCase(inMemoryTenantsRepository)
   })
 
-  it('should edit a tenant', async () => {
+  it("should edit a tenant's name", async () => {
     inMemoryTenantsRepository.items.push(
-      Tenant.create(
-        {
-          name: 'luiz',
-          email: 'luiz@gmail.com',
-          phone: '+5548997121754',
-          photo: 'user01',
-        },
-        new UniqueEntityID('primeiroid')
-      )
+      makeTenant({}, new UniqueEntityID('primeiroid'))
     )
     const result = await sut.execute({
       id: 'primeiroid',
@@ -33,27 +25,16 @@ describe('Edit a tenant', () => {
     expect(inMemoryTenantsRepository.items[0].name).toEqual('luiz verissimo')
   })
 
-  it('should not create a tenant without name', async () => {
+  it("should edit a tenant's email", async () => {
+    inMemoryTenantsRepository.items.push(
+      makeTenant({}, new UniqueEntityID('primeiroid'))
+    )
     const result = await sut.execute({
-      name: '',
+      id: 'primeiroid',
       email: 'luiz@gmail.com',
-      phone: '+5548997121754',
-      photo: 'user01',
     })
 
-    expect(result.isLeft).toBeTruthy
-    expect(inMemoryTenantsRepository.items.length).toBe(0)
-  })
-
-  it('should not create a tenant without email', async () => {
-    const result = await sut.execute({
-      name: 'luiz',
-      email: '',
-      phone: '+5548997121754',
-      photo: 'user01',
-    })
-
-    expect(result.isLeft).toBeTruthy
-    expect(inMemoryTenantsRepository.items.length).toBe(0)
+    expect(result.isRight).toBeTruthy
+    expect(inMemoryTenantsRepository.items[0].email).toEqual('luiz@gmail.com')
   })
 })

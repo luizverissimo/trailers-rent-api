@@ -5,7 +5,7 @@ import { ResourceNotFoundError } from '@/shared/interfaces/errors/use-case-error
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 
 interface EditRenterUseCaseRequest {
-  id?: string
+  id: string
   name?: string
   email?: string
   phone?: string

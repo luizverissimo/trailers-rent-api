@@ -1,9 +1,9 @@
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
-import { Trailler } from '../../../models/entities/trailler'
-import { TraillersRepository } from '../../repositories/traillers-repository'
+import { Trailer } from '../../../models/entities/trailer'
+import { TrailersRepository } from '../../repositories/trailers-repository'
 import { Either, right } from '@/shared/interfaces/either'
 
-interface CreateTraillerUseCaseRequest {
+interface CreateTrailerUseCaseRequest {
   tenantId: string
   model: string
   brand: string
@@ -15,15 +15,15 @@ interface CreateTraillerUseCaseRequest {
   longitude: number
 }
 
-type CreateTraillerUseCaseResponse = Either<
+type CreateTrailerUseCaseResponse = Either<
   null,
   {
-    trailler: Trailler
+    trailer: Trailer
   }
 >
 
-export class CreateTraillerUseCase {
-  constructor(private traillersRepository: TraillersRepository) {}
+export class CreateTrailerUseCase {
+  constructor(private trailersRepository: TrailersRepository) {}
 
   async execute({
     tenantId,
@@ -35,8 +35,8 @@ export class CreateTraillerUseCase {
     unavailable,
     latitude,
     longitude,
-  }: CreateTraillerUseCaseRequest): Promise<CreateTraillerUseCaseResponse> {
-    const trailler = Trailler.create({
+  }: CreateTrailerUseCaseRequest): Promise<CreateTrailerUseCaseResponse> {
+    const trailer = Trailer.create({
       tenantId: new UniqueEntityID(tenantId),
       model,
       brand,
@@ -48,8 +48,8 @@ export class CreateTraillerUseCase {
       longitude,
     })
 
-    await this.traillersRepository.create(trailler)
+    await this.trailersRepository.create(trailer)
 
-    return right({ trailler })
+    return right({ trailer })
   }
 }

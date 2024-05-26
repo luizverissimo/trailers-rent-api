@@ -71,7 +71,7 @@
       "containerId": "zA7bn4It_RfwaKy7YVPVq",
       "originalText": "Renters",
       "lineHeight": 1.25,
-      "baseline": 21
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -141,7 +141,7 @@
       "containerId": "uz_oyIFM1flktGqYKhhaG",
       "originalText": "Tenants",
       "lineHeight": 1.25,
-      "baseline": 21
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -179,8 +179,8 @@
     },
     {
       "type": "text",
-      "version": 878,
-      "versionNonce": 1119694865,
+      "version": 880,
+      "versionNonce": 102120332,
       "isDeleted": false,
       "id": "jQmrtAQfvgxY4uSWkxt4b",
       "fillStyle": "solid",
@@ -189,29 +189,29 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 1175.3400421142578,
+      "x": 1177.9700393676758,
       "y": 168.5,
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
-      "width": 83.31991577148438,
+      "width": 78.05992126464844,
       "height": 25,
       "seed": 863989008,
       "groupIds": [],
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713637176705,
+      "updated": 1716744288591,
       "link": null,
       "locked": false,
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "Traillers",
+      "text": "Trailers",
       "textAlign": "center",
       "verticalAlign": "middle",
       "containerId": "z7MCxxptue9MLGrNYGjQ7",
-      "originalText": "Traillers",
+      "originalText": "Trailers",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "rectangle",
@@ -281,7 +281,7 @@
       "containerId": "Dx0j8dFQyDNv4WBmUhrfR",
       "originalText": "Deals",
       "lineHeight": 1.25,
-      "baseline": 21
+      "baseline": 20
     },
     {
       "type": "line",
@@ -395,7 +395,7 @@
       "containerId": "Z2kR6MEfDW37bzgOXXIUk",
       "originalText": "    - id\n    - name\n    - email\n    - phone\n    - photo",
       "lineHeight": 1.25,
-      "baseline": 121
+      "baseline": 120
     },
     {
       "type": "rectangle",
@@ -465,7 +465,7 @@
       "containerId": "imtJZYVSurklyGpcoCB0y",
       "originalText": "    - id\n    - name\n    - email\n    - phone\n    - photo",
       "lineHeight": 1.25,
-      "baseline": 121
+      "baseline": 120
     },
     {
       "type": "line",
@@ -579,7 +579,7 @@
       "containerId": "uANPPGakNbLYGvIBNziGc",
       "originalText": "    - id\n    - tenant_id\n    - model\n    - brand\n    - description\n    - photo\n    - price_per_day\n    - unavailable\n    - latitude\n    - longitude",
       "lineHeight": 1.25,
-      "baseline": 246
+      "baseline": 245
     },
     {
       "type": "line",
@@ -693,7 +693,7 @@
       "containerId": "P1BFW8E5S8YbZIxwQhIF1",
       "originalText": "    - id\n    - tenant_id\n    - renter_id\n    - start_date\n    - end_date\n    - price\n    - assing_tenant\n    - assingn_renter",
       "lineHeight": 1.25,
-      "baseline": 196
+      "baseline": 195
     },
     {
       "type": "line",
@@ -741,8 +741,8 @@
     },
     {
       "type": "text",
-      "version": 333,
-      "versionNonce": 1176094449,
+      "version": 334,
+      "versionNonce": 591416628,
       "isDeleted": false,
       "id": "_zWo98_U-pqytA_AtSpkZ",
       "fillStyle": "solid",
@@ -762,7 +762,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713637167486,
+      "updated": 1716744283168,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -773,7 +773,7 @@
       "containerId": null,
       "originalText": "Functionals Requires\n- only tenants must create traillers\n- a deal is valid when It have 2 assigns\n- in a valid deol period trailler must be unavailable",
       "lineHeight": 1.25,
-      "baseline": 93
+      "baseline": 92
     }
   ],
   "appState": {

@@ -12,11 +12,36 @@ export interface DealsProps {
 }
 
 export class Deal extends Entity<DealsProps> {
-  get tenantId() {
-    return this.props.tenantId
-  }
   static create(props: DealsProps, id?: UniqueEntityID) {
     const deal = new Deal({ ...props }, id)
     return deal
+  }
+
+  get tenantId() {
+    return this.props.tenantId
+  }
+
+  get renterId() {
+    return this.props.renterId
+  }
+
+  get startDate() {
+    return this.props.startDate
+  }
+
+  get endDate() {
+    return this.props.endDate
+  }
+
+  get price() {
+    return this.props.price
+  }
+
+  get assignedTenant() {
+    return this.props.assignedTenant
+  }
+
+  get assignedRenter() {
+    return this.props.assignedRenter
   }
 }

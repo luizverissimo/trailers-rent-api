@@ -1,4 +1,4 @@
-import { Deal } from '@/domain/renting/models/entities/deal'
+import { Deal } from '@/domain/renting/enterprise/entities/deal'
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 import { faker } from '@faker-js/faker'
 

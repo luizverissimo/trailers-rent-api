@@ -1,5 +1,5 @@
-import { TrailersRepository } from '@/domain/renting/applications/repositories/trailers-repository'
-import { Trailer } from '@/domain/renting/models/entities/trailer'
+import { TrailersRepository } from '@/domain/renting/application/repositories/trailers-repository'
+import { Trailer } from '@/domain/renting/enterprise/entities/trailer'
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 
 export class InMemoryTrailersRepository implements TrailersRepository {

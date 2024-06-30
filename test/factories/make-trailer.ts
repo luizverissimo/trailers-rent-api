@@ -1,4 +1,4 @@
-import { Trailer } from '@/domain/renting/models/entities/trailer'
+import { Trailer } from '@/domain/renting/enterprise/entities/trailer'
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 import { faker } from '@faker-js/faker'
 

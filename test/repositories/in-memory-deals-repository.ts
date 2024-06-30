@@ -1,5 +1,5 @@
-import { DealsRepository } from '@/domain/renting/applications/repositories/deals-repository'
-import { Deal } from '@/domain/renting/models/entities/deal'
+import { DealsRepository } from '@/domain/renting/application/repositories/deals-repository'
+import { Deal } from '@/domain/renting/enterprise/entities/deal'
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 
 export class InMemoryDealsRepository implements DealsRepository {

@@ -1,4 +1,4 @@
-import { Renter } from '@/domain/renting/models/entities/renter'
+import { Renter } from '@/domain/renting/enterprise/entities/renter'
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 import { faker } from '@faker-js/faker'
 

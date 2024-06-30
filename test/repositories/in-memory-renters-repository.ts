@@ -1,5 +1,5 @@
-import { RentersRepository } from '@/domain/renting/applications/repositories/renters-repository'
-import { Renter } from '@/domain/renting/models/entities/renter'
+import { RentersRepository } from '@/domain/renting/application/repositories/renters-repository'
+import { Renter } from '@/domain/renting/enterprise/entities/renter'
 import { UniqueEntityID } from '@/shared/interfaces/entities/unique-entity-id'
 
 export class InMemoryRentersRepository implements RentersRepository {

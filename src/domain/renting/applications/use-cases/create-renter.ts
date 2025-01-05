@@ -1,5 +1,5 @@
-import { Renter } from '../../models/entities/renter'
-import { RentersRepository } from '../repositories/renters-repository'
+import { Renter } from '../../models/entities'
+import { RentersRepository } from '../repositories'
 
 interface CreateRenterUseCaseRequest {
   name: string

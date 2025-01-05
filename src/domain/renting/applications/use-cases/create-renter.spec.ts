@@ -1,5 +1,5 @@
+import { InMemoryRentersRepository } from 'test/repositories'
 import { CreateRenterUseCase } from './create-renter'
-import { InMemoryRentersRepository } from 'test/repositories/in-memory-renters-repository'
 
 let inMemoryRentersRepository: InMemoryRentersRepository
 let sut: CreateRenterUseCase

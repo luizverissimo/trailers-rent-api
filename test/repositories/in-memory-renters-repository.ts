@@ -1,5 +1,5 @@
-import { RentersRepository } from '@/domain/renting/applications/repositories/renters-repository'
-import { Renter } from '@/domain/renting/models/entities/renter'
+import { RentersRepository } from '@/domain/renting/applications/repositories'
+import { Renter } from '@/domain/renting/models/entities'
 
 export class InMemoryRentersRepository implements RentersRepository {
   public items: Renter[] = []
